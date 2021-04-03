@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Test;
 
 use App\SprintReport;
+use App\StoryPoint;
 use PHPUnit\Framework\TestCase;
 
 final class SprintReportTest extends TestCase
@@ -19,7 +20,7 @@ final class SprintReportTest extends TestCase
     /** @test */
     public function completedPointsDoNotChangeWhenAddingZeroStoryPoints(): void
     {
-        $this->sprintReport->addCompletedStoryPoints(0);
+        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(0));
 
         $emptyReport = new SprintReport(0);
 
@@ -30,13 +31,13 @@ final class SprintReportTest extends TestCase
     public function failsWhenAddingLessThanZeroStoryPoints(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->sprintReport->addCompletedStoryPoints(-1);
+        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(-1));
     }
 
     /** @test */
     public function registersStoryPointsWhenAddingAValidAmountToAnEmptyReport(): void
     {
-        $this->sprintReport->addCompletedStoryPoints(3);
+        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(3));
 
         $expected = new SprintReport(3);
         self::assertEquals($expected, $this->sprintReport);
@@ -45,8 +46,8 @@ final class SprintReportTest extends TestCase
     /** @test */
     public function addsUpStoryPointsWhenAddingToANonEmptyReport(): void
     {
-        $this->sprintReport->addCompletedStoryPoints(3);
-        $this->sprintReport->addCompletedStoryPoints(5);
+        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(3));
+        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(5));
 
         $expected = new SprintReport(8);
         self::assertEquals($expected, $this->sprintReport);
