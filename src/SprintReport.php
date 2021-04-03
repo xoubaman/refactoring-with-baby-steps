@@ -9,7 +9,11 @@ class SprintReport {
     public function __construct(
         private int $completedStoryPoints,
         ?StoryPoint $temporal = null
-    ){}
+    ){
+        if ($temporal) {
+            $this->completedStoryPoints = $temporal->value();
+        }
+    }
 
     /** @deprecated */
     public function addCompletedStoryPointsWithInt(int $amount): void
