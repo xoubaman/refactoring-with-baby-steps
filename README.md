@@ -12,4 +12,6 @@ The steps taken are:
 
 * [XXX] Initial commit with the `SprintReport` class using `int` for Story Points.
 * [XXX] Adding an empty method with a `StoryPoint` as parameter.
+* [XXX] Instantiate the `StoryPoint` from the `int`value inside the current method.
+
 

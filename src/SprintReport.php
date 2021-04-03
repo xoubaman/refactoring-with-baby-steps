@@ -12,6 +12,8 @@ class SprintReport {
 
     public function addCompletedStoryPoints(int $amount): void
     {
+        $storyPoint = new StoryPoint($amount);
+
         if ($amount < 0) {
             throw new InvalidArgumentException('SP cannot be less than 0');
         }
