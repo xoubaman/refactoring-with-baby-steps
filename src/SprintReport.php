@@ -18,4 +18,9 @@ class SprintReport {
 
         $this->completedStoryPoints += $amount;
     }
+
+    public function addCompletedStoryPointsWithVO(StoryPoint $amount): void
+    {
+
+    }
 }
