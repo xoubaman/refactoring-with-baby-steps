@@ -21,5 +21,8 @@ The steps taken are:
 * [XXX] Update the tests to no longer call the current method and call the new one instead.
 * [XXX] Rename the new method with a consistent name.
 
+At this point we no longer need story points passed as integers when adding more to the report, but still the report expects an initial value as an integer in its constructor. To avoid it, we do:
+
+* [XXX] Add a new optional parameter to the constructor typed to `StoryPoint`.
 
 

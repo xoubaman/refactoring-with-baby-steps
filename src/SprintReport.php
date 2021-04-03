@@ -8,6 +8,7 @@ use InvalidArgumentException;
 class SprintReport {
     public function __construct(
         private int $completedStoryPoints,
+        ?StoryPoint $temporal = null
     ){}
 
     /** @deprecated */
