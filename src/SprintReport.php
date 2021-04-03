@@ -10,11 +10,7 @@ class SprintReport {
         private int $completedStoryPoints,
         ?StoryPoint $temporal = null
     ){
-        if ($temporal) {
-            $this->completedStoryPoints = $temporal->value();
-        }
-
-//        $this->completedStoryPoints = $temporal->value();
+        $this->completedStoryPoints = $temporal->value();
     }
 
     /** @deprecated */
