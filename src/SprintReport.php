@@ -14,10 +14,10 @@ class SprintReport {
     public function addCompletedStoryPointsWithInt(int $amount): void
     {
         $storyPoint = new StoryPoint($amount);
-        $this->addCompletedStoryPointsWithVO($storyPoint);
+        $this->addCompletedStoryPoints($storyPoint);
     }
 
-    public function addCompletedStoryPointsWithVO(StoryPoint $amount): void
+    public function addCompletedStoryPoints(StoryPoint $amount): void
     {
         if ($amount->value() < 0) {
             throw new InvalidArgumentException('SP cannot be less than 0');

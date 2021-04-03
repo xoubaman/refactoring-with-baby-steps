@@ -20,7 +20,7 @@ final class SprintReportTest extends TestCase
     /** @test */
     public function completedPointsDoNotChangeWhenAddingZeroStoryPoints(): void
     {
-        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(0));
+        $this->sprintReport->addCompletedStoryPoints(new StoryPoint(0));
 
         $emptyReport = new SprintReport(0);
 
@@ -31,13 +31,13 @@ final class SprintReportTest extends TestCase
     public function failsWhenAddingLessThanZeroStoryPoints(): void
     {
         $this->expectException(\InvalidArgumentException::class);
-        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(-1));
+        $this->sprintReport->addCompletedStoryPoints(new StoryPoint(-1));
     }
 
     /** @test */
     public function registersStoryPointsWhenAddingAValidAmountToAnEmptyReport(): void
     {
-        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(3));
+        $this->sprintReport->addCompletedStoryPoints(new StoryPoint(3));
 
         $expected = new SprintReport(3);
         self::assertEquals($expected, $this->sprintReport);
@@ -46,8 +46,8 @@ final class SprintReportTest extends TestCase
     /** @test */
     public function addsUpStoryPointsWhenAddingToANonEmptyReport(): void
     {
-        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(3));
-        $this->sprintReport->addCompletedStoryPointsWithVO(new StoryPoint(5));
+        $this->sprintReport->addCompletedStoryPoints(new StoryPoint(3));
+        $this->sprintReport->addCompletedStoryPoints(new StoryPoint(5));
 
         $expected = new SprintReport(8);
         self::assertEquals($expected, $this->sprintReport);

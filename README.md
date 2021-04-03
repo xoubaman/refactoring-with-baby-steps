@@ -19,6 +19,7 @@ The steps taken are:
 * [XXX] Duplicate the increase of story points in the new method, commenting it.
 * [XXX] After switching which increase is commented, and running the test, delete the increase in the current method.
 * [XXX] Update the tests to no longer call the current method and call the new one instead.
+* [XXX] Rename the new method with a consistent name.
 
 
 
