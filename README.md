@@ -15,5 +15,6 @@ The steps taken are:
 * [XXX] Instantiate the `StoryPoint` from the `int`value inside the current method.
 * [XXX] Duplicate the guard clause inside the new method.
 * [XXX] Call the new method **after** the initial guard clause.
+* [XXX] Delete the initial guard clause (after commenting it and ensure the tests pass).
 
 
