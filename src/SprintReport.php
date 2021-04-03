@@ -10,7 +10,8 @@ class SprintReport {
         private int $completedStoryPoints,
     ){}
 
-    public function addCompletedStoryPoints(int $amount): void
+    /** @deprecated */
+    public function addCompletedStoryPointsWithInt(int $amount): void
     {
         $storyPoint = new StoryPoint($amount);
         $this->addCompletedStoryPointsWithVO($storyPoint);
