@@ -23,5 +23,7 @@ class SprintReport {
         if ($amount->value() < 0) {
             throw new InvalidArgumentException('SP cannot be less than 0');
         }
+
+//        $this->completedStoryPoints += $amount->value();
     }
 }
