@@ -23,6 +23,8 @@ class SprintReport {
 
     public function addCompletedStoryPointsWithVO(StoryPoint $amount): void
     {
-
+        if ($amount->value() < 0) {
+            throw new InvalidArgumentException('SP cannot be less than 0');
+        }
     }
 }
