@@ -14,7 +14,7 @@ final class SprintReportTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->sprintReport = new SprintReport(new StoryPoint(0), 0);
+        $this->sprintReport = new SprintReport(new StoryPoint(0));
     }
 
     /** @test */
@@ -22,7 +22,7 @@ final class SprintReportTest extends TestCase
     {
         $this->sprintReport->addCompletedStoryPoints(new StoryPoint(0));
 
-        $emptyReport = new SprintReport(new StoryPoint(0), 0);
+        $emptyReport = new SprintReport(new StoryPoint(0));
 
         self::assertEquals($emptyReport, $this->sprintReport);
     }
@@ -39,7 +39,7 @@ final class SprintReportTest extends TestCase
     {
         $this->sprintReport->addCompletedStoryPoints(new StoryPoint(3));
 
-        $expected = new SprintReport(new StoryPoint(3), 3);
+        $expected = new SprintReport(new StoryPoint(3));
         self::assertEquals($expected, $this->sprintReport);
     }
 
@@ -49,7 +49,7 @@ final class SprintReportTest extends TestCase
         $this->sprintReport->addCompletedStoryPoints(new StoryPoint(3));
         $this->sprintReport->addCompletedStoryPoints(new StoryPoint(5));
 
-        $expected = new SprintReport(new StoryPoint(8), 8);
+        $expected = new SprintReport(new StoryPoint(8));
         self::assertEquals($expected, $this->sprintReport);
     }
 }

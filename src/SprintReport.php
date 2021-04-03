@@ -7,8 +7,7 @@ use InvalidArgumentException;
 
 class SprintReport {
     public function __construct(
-        ?StoryPoint $temporal = null,
-        private int $completedStoryPoints
+        StoryPoint $temporal
     ){
         $this->completedStoryPoints = $temporal->value();
     }
