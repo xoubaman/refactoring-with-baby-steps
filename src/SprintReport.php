@@ -14,8 +14,6 @@ class SprintReport {
     {
         $storyPoint = new StoryPoint($amount);
         $this->addCompletedStoryPointsWithVO($storyPoint);
-
-        $this->completedStoryPoints += $amount;
     }
 
     public function addCompletedStoryPointsWithVO(StoryPoint $amount): void
@@ -24,6 +22,6 @@ class SprintReport {
             throw new InvalidArgumentException('SP cannot be less than 0');
         }
 
-//        $this->completedStoryPoints += $amount->value();
+        $this->completedStoryPoints += $amount->value();
     }
 }
