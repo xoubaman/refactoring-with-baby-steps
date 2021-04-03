@@ -18,6 +18,8 @@ class SprintReport {
             throw new InvalidArgumentException('SP cannot be less than 0');
         }
 
+        $this->addCompletedStoryPointsWithVO($storyPoint);
+
         $this->completedStoryPoints += $amount;
     }
 

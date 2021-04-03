@@ -11,8 +11,9 @@ As it is a refactor process there are no substantial changes in the tests but on
 The steps taken are:
 
 * [XXX] Initial commit with the `SprintReport` class using `int` for Story Points.
-* [XXX] Adding an empty method with a `StoryPoint` as parameter.
+* [XXX] Add a new (empty) method with a `StoryPoint` as parameter.
 * [XXX] Instantiate the `StoryPoint` from the `int`value inside the current method.
 * [XXX] Duplicate the guard clause inside the new method.
+* [XXX] Call the new method **after** the initial guard clause.
 
 
