@@ -28,4 +28,5 @@ At this point we no longer need story points passed as integers when adding more
 * [XXX] Set the completed value from the VO parameter when provided.
 * [XXX] Duplicate commented the line setting the initial value in the constructor.
 * [XXX] Delete the conditional assignment when the VO is provided after switching the commented block and verify tests are green.
+* [XXX] Refactor the constructor signature to expect the VO as first parameter.
 
