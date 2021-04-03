@@ -13,6 +13,8 @@ class SprintReport {
         if ($temporal) {
             $this->completedStoryPoints = $temporal->value();
         }
+
+//        $this->completedStoryPoints = $temporal->value();
     }
 
     /** @deprecated */

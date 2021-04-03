@@ -24,5 +24,7 @@ The steps taken are:
 At this point we no longer need story points passed as integers when adding more to the report, but still the report expects an initial value as an integer in its constructor. To avoid it, we do:
 
 * [XXX] Add a new optional parameter to the constructor typed to `StoryPoint`.
-* [XXX] Set the completed value from the VO parameter when provided.
 * [XXX] Update all constructor usages in tests to receive the new parameter.
+* [XXX] Set the completed value from the VO parameter when provided.
+* [XXX] Duplicate commented the line setting the initial value in the constructor.
+
