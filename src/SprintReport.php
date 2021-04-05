@@ -12,7 +12,6 @@ class SprintReport
     public function __construct(
         StoryPoint $completedStoryPoints
     ) {
-        $this->completedStoryPoints   = $completedStoryPoints->value();
         $this->completedStoryPointsVO = $completedStoryPoints;
     }
 
@@ -29,7 +28,6 @@ class SprintReport
             throw new InvalidArgumentException('SP cannot be less than 0');
         }
 
-        $this->completedStoryPoints += $amount->value();
         $this->completedStoryPointsVO = $this->completedStoryPointsVO->sum($amount);
     }
 }
