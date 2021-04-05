@@ -30,4 +30,5 @@ At this point we no longer need story points passed as integers when adding more
 * [XXX] Delete the conditional assignment when the VO is provided after switching the commented block and verify tests are green.
 * [XXX] Refactor the constructor signature to expect the VO as first parameter.
 * [XXX] Refactor the constructor signature to expect only the VO.
+* [XXX] Rename constructor parameter.
 
