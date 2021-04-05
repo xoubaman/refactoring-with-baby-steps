@@ -7,12 +7,9 @@ use InvalidArgumentException;
 
 class SprintReport
 {
-    private ?StoryPoint $completedStoryPointsVO = null;
-
     public function __construct(
-        StoryPoint $completedStoryPoints
+        private StoryPoint $completedStoryPoints
     ) {
-        $this->completedStoryPointsVO = $completedStoryPoints;
     }
 
     /** @deprecated */
@@ -28,6 +25,6 @@ class SprintReport
             throw new InvalidArgumentException('SP cannot be less than 0');
         }
 
-        $this->completedStoryPointsVO = $this->completedStoryPointsVO->sum($amount);
+        $this->completedStoryPoints = $this->completedStoryPoints->sum($amount);
     }
 }
