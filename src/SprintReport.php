@@ -5,7 +5,10 @@ namespace App;
 
 use InvalidArgumentException;
 
-class SprintReport {
+class SprintReport
+{
+    private ?StoryPoint $completedStoryPointsVO = null;
+
     public function __construct(
         StoryPoint $completedStoryPoints
     ){
