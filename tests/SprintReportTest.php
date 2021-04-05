@@ -28,13 +28,6 @@ final class SprintReportTest extends TestCase
     }
 
     /** @test */
-    public function failsWhenAddingLessThanZeroStoryPoints(): void
-    {
-        $this->expectException(\InvalidArgumentException::class);
-        $this->sprintReport->addCompletedStoryPoints(new StoryPoint(-1));
-    }
-
-    /** @test */
     public function registersStoryPointsWhenAddingAValidAmountToAnEmptyReport(): void
     {
         $this->sprintReport->addCompletedStoryPoints(new StoryPoint(3));
