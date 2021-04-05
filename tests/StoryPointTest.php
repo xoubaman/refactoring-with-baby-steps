@@ -19,4 +19,11 @@ final class StoryPointTest extends TestCase
         self::assertNotSame($twoSP, $sum);
         self::assertEquals(5, $sum->value());
     }
+
+    /** @test */
+    public function doesNotAllowNegativeValues(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        new StoryPoint(-1);
+    }
 }

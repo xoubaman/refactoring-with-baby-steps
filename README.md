@@ -42,4 +42,8 @@ Now that there is no reference to integers in the class public API (besides the 
 * [XXX] Remove the int story point property usage.
 * [XXX] Clean up `SprintReport` constructor.
 
+* [XXX] Validate `StoryPoint` value in the constructor.
+
+
+
 
