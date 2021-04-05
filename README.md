@@ -32,3 +32,8 @@ At this point we no longer need story points passed as integers when adding more
 * [XXX] Refactor the constructor signature to expect only the VO.
 * [XXX] Rename constructor parameter.
 
+Now that there is no reference to integers in the class public API (besides the deprecated method) we can change the `SprintReport` internals to use `StoryPoint` VO as well and push logic belonging to the VO inside it:
+
+* [XXX] Implement sum operation in `StoryPoint`.
+
+

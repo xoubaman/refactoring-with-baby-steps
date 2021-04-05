@@ -13,4 +13,9 @@ class StoryPoint
     {
         return $this->value;
     }
+
+    public function sum(StoryPoint $storyPoints): self
+    {
+        return new self($this->value + $storyPoints->value());
+    }
 }
