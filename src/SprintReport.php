@@ -21,10 +21,6 @@ class SprintReport
 
     public function addCompletedStoryPoints(StoryPoint $amount): void
     {
-        if ($amount->value() < 0) {
-            throw new InvalidArgumentException('SP cannot be less than 0');
-        }
-
         $this->completedStoryPoints = $this->completedStoryPoints->sum($amount);
     }
 }
