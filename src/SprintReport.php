@@ -12,7 +12,7 @@ class SprintReport
     public function __construct(
         StoryPoint $completedStoryPoints
     ) {
-        $this->completedStoryPoints = $completedStoryPoints->value();
+        $this->completedStoryPoints   = $completedStoryPoints->value();
         $this->completedStoryPointsVO = $completedStoryPoints;
     }
 
@@ -30,9 +30,6 @@ class SprintReport
         }
 
         $this->completedStoryPoints += $amount->value();
-
-        if ($this->completedStoryPointsVO) {
-            $this->completedStoryPointsVO = $this->completedStoryPointsVO->sum($amount);
-        }
+        $this->completedStoryPointsVO = $this->completedStoryPointsVO->sum($amount);
     }
 }

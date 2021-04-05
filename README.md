@@ -38,5 +38,6 @@ Now that there is no reference to integers in the class public API (besides the 
 * [XXX] Optional property for the story points as VO.
 * [XXX] Add the story points using the VO when the new property is set.
 * [XXX] Set the initial `StoryPoint` VO in the constructor.
+* [XXX] Remove the conditional sum of VO story points when adding more.
 
 
