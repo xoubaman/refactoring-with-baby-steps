@@ -37,5 +37,6 @@ Now that there is no reference to integers in the class public API (besides the 
 * [XXX] Implement sum operation in `StoryPoint`.
 * [XXX] Optional property for the story points as VO.
 * [XXX] Add the story points using the VO when the new property is set.
+* [XXX] Set the initial `StoryPoint` VO in the constructor.
 
 

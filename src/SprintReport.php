@@ -13,6 +13,7 @@ class SprintReport
         StoryPoint $completedStoryPoints
     ) {
         $this->completedStoryPoints = $completedStoryPoints->value();
+        $this->completedStoryPointsVO = $completedStoryPoints;
     }
 
     /** @deprecated */
