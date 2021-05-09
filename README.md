@@ -1,4 +1,4 @@
-This repository shows the process of refactoring in baby steps as explained in [FIXME: link to post when any].
+This repository shows the process of refactoring in baby steps as explained in [this post](https://dev.to/xoubaman/refactoring-with-baby-steps-3mgg).
 
 In the context of an application dealing with Scrum and Story Points (e.g. Jira), we refactor a small `SprintReport`
 class that uses `int` Story Points to use instead a new `StoryPoint` Value Object (VO) instead.
